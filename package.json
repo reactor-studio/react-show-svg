@@ -1,0 +1,29 @@
+{
+  "name": "react-show-svg",
+  "version": "0.0.1",
+  "description": "React wrapper component for svg icons",
+  "main": "build/index.js",
+  "dependencies": {
+    "react": "^15.5.4",
+    "webpack": "^2.6.1",
+    "svg-to-jsx": "https://github.com/reactor-studio/svg-to-jsx"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Josip Sokec",
+    "email": "josip@sokec.net"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
