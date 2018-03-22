@@ -1,6 +1,6 @@
 {
   "name": "react-show-svg",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "description": "React wrapper component for svg icons",
   "author": "Josip Sokec <josip@sokec.net>",
   "main": "build/index.js",
@@ -17,7 +17,8 @@
     "test": "jest",
     "test --u": "jest --u",
     "start": "webpack --watch",
-    "build": "babel src -d dist"
+    "build": "babel src -d dist",
+    "publish": "npm run build && np"
   },
   "jest": {
     "snapshotSerializers": [
