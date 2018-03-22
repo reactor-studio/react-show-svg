@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component should create wrapper around svg 1`] = `
+<div
+  className="test-class"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<svg version=\\"1.1\\"><text fontFamily=\\"Verdana\\"/></svg>",
+    }
+  }
+  id="test-id"
+  onClick={[Function]}
+/>
+`;
