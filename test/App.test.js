@@ -4,7 +4,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import Renderer from 'react-test-renderer';
 
 // Component
-import App from '../src/App/App';
+import App from '../src';
 
 // Config
 configure({ adapter: new Adapter() });
