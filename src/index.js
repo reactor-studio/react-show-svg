@@ -29,15 +29,18 @@ class ReactShowSvg extends Component {
 
   parseSvg = (raw) => {
     const { size, width, height, fill } = this.props;
-
-    // parse svg to jsx
-    return svgtojsx(raw, {
+    const options = {
       props: {
         width: size || width,
         height: size || height,
         fill
       }
-    }).then(jsx => jsx);
+    };
+
+    // parse svg to jsx
+    return svgtojsx(raw, options).then(jsx => jsx).catch(error => {
+      console.log('Error parsing icon: ', error);
+    });
   }
 
   renderIcon(jsx) {
