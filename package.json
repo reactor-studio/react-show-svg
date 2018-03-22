@@ -1,21 +1,39 @@
 {
   "name": "react-show-svg",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "description": "React wrapper component for svg icons",
+  "author": "Josip Sokec <josip@sokec.net>",
   "main": "build/index.js",
-  "dependencies": {
-    "react": "^15.5.4",
-    "webpack": "^2.6.1",
-    "svg-to-jsx": "https://github.com/reactor-studio/svg-to-jsx"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reactor-studio/react-show-svg.git"
   },
+  "bugs": {
+    "url": "https://github.com/reactor-studio/react-show-svg/issues"
+  },
+  "homepage": "https://github.com/reactor-studio/react-show-svg",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test --u": "jest --u",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "babel src -d dist"
   },
-  "author": {
-    "name": "Josip Sokec",
-    "email": "josip@sokec.net"
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testMatch": [
+      "**/?(*.)(spec|test).js?(x)"
+    ],
+    "verbose": false,
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  },
+  "dependencies": {
+    "svg-to-jsx": "git+https://github.com/reactor-studio/svg-to-jsx.git"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -24,6 +42,16 @@
     "babel-preset-env": "^1.5.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "enzyme-to-json": "^3.3.3",
+    "jest": "22.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "svg-inline-loader": "^0.8.0"
+  },
+  "peerDependencies": {
+    "react": "16.2.0"
   }
 }

@@ -7,37 +7,40 @@ class ReactShowSvg extends Component {
     super(props);
 
     this.state = {
-      jsx: null,
+      icon: null
     };
   }
 
   componentDidMount() {
-    this.svgToJsx(this.props.icon);
+    const { icon } = this.props;
+
+    // check if icon exists
+    icon && this.svgToJsx(icon);
   }
 
   svgToJsx = (raw) => {
+    // parse then render & save icon
     return this.parseSvg(raw).then((jsx) => {
-      this.renderIcon(jsx);
+      const icon = this.renderIcon(jsx);
+      
+      this.setState({ icon });
     });
   }
 
   parseSvg = (raw) => {
-    const { size } = this.props;
+    const { size, width, height, fill } = this.props;
 
+    // parse svg to jsx
     return svgtojsx(raw, {
       props: {
-        width: size,
-        height: size
-      },
+        width: size || width,
+        height: size || height,
+        fill
+      }
     }).then(jsx => jsx);
   }
 
-  renderIcon = (jsx) => {
-    this.setState({ jsx });
-  }
-
-  render() {
-    const { jsx } = this.state;
+  renderIcon(jsx) {
     const {
       id,
       ref,
@@ -45,29 +48,40 @@ class ReactShowSvg extends Component {
       onClick
     } = this.props;
 
-    const icon = jsx
-      ? (
-        <div
-          id={id}
-          ref={ref}
-          onClick={onClick}
-          className={className}
-          dangerouslySetInnerHTML={{ __html: jsx }}
-        />
-      )
-      : null;
+    // wrap svg icon inside div & set props
+    const icon = (
+      <div
+        id={id}
+        ref={ref}
+        onClick={onClick}
+        className={className}
+        dangerouslySetInnerHTML={{ __html: jsx }}
+      />
+    );
 
     return icon;
+  }
+
+  render() {
+    const { icon } = this.state;
+
+    // return icon when ready
+    return icon ? icon : null;
   }
 }
 
 ReactShowSvg.defaultProps = {
-  size: '20px',
+  width: '20px',
+  height: '20px',
+  fill: 'black'
 };
 
 ReactShowSvg.propTypes = {
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.string.isRequired,
   size: PropTypes.string,
+  width: PropTypes.string,
+  fill: PropTypes.string,
+  height: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
   id: PropTypes.string,
