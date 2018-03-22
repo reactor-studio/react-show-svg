@@ -15,6 +15,14 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-inline-loader'
+          }
+        ]
       }
     ]
   }
