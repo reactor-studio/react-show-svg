@@ -51,15 +51,15 @@ const config = {
 ```
 
 ### API
-icon: `string`
-width: `string`
-height: `string`
-size: `string` ( width & height )
-fill: `string`
-className: `string`
-onClick: `function`
-ref: `function`
-id: `string`
+* icon: `string`
+* width: `string`
+* height: `string`
+* size: `string` ( width & height )
+* fill: `string`
+* className: `string`
+* onClick: `function`
+* ref: `function`
+* id: `string`
 
 ### Dependencies
 * [svg-inline-loader](https://github.com/webpack-contrib/svg-inline-loader)
