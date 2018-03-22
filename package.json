@@ -1,6 +1,6 @@
 {
   "name": "react-show-svg",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "React wrapper component for svg icons",
   "author": "Josip Sokec <josip@sokec.net>",
   "main": "build/index.js",
