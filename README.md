@@ -4,7 +4,7 @@ Parse svg to jsx & create wrapper around.
 ### TL;DR
 ```javascript
 import ReactShowSvg from 'react-show-svg';
-import SvgIcon from 'path/to/icon';
+import SvgIcon from 'path/to/icon.svg';
 
 render() {
   <ReactShowSvg
@@ -31,7 +31,7 @@ as `icon` property.
 
 You can also pass `width & height` or `size` properties ( pass size if you want width & height to be equal ).
 
-**IMPORTANT: Update your webpack config file:**
+**IMPORTANT:** Update your webpack config file:
 
 ```javascript
 const config = {
