@@ -1,4 +1,4 @@
-# Introduction
+# React show svg
 [![Build Status](https://travis-ci.org/reactor-studio/react-show-svg.svg?branch=master)](https://travis-ci.org/reactor-studio/react-show-svg)
 
 Simple react component that transforms plain svg to usable icon.
