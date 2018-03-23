@@ -62,7 +62,7 @@ var ReactShowSvg = function (_Component) {
       return (0, _svgToJsx2.default)(raw, options).then(function (jsx) {
         return jsx;
       }).catch(function (error) {
-        console.log('Error parsing icon: ', error);
+        console.error('Error parsing icon: ', error);
       });
     };
 
