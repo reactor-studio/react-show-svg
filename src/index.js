@@ -39,7 +39,7 @@ class ReactShowSvg extends Component {
 
     // parse svg to jsx
     return svgtojsx(raw, options).then(jsx => jsx).catch(error => {
-      console.log('Error parsing icon: ', error);
+      console.error('Error parsing icon: ', error);
     });
   }
 
