@@ -1,7 +1,7 @@
 {
   "name": "react-show-svg",
   "version": "1.0.0",
-  "description": "React wrapper component for svg icons",
+  "description": "Simple react component that transforms plain svg to usable icon.",
   "author": "Josip Sokec <josip@sokec.net>",
   "main": "dist/index.js",
   "license": "MIT",

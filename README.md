@@ -22,23 +22,15 @@ class App extends React.Component {
 }
 ```
 
-### NPM
+
+**IMPORTANT** 
+
+**First you need to add `svg-inline-loader` to your webpack project!**
 ```bash
-$ npm install react-show-svg --save
+$ npm install svg-inline-loader --save
 ```
 
-### Yarn
-```bash
-$ yarn add react-show-svg
-```
-
-### Usage
-Import raw svg file with [svg-inline-loader](https://github.com/webpack-contrib/svg-inline-loader) and pass it
-as `icon` property.
-
-You can also pass `width & height` or `size` properties ( pass size if you want width & height to be equal ).
-
-**IMPORTANT** - Update your webpack config file:
+Update your webpack config file:
 
 ```javascript
 const config = {
@@ -56,6 +48,22 @@ const config = {
   }
 }
 ```
+
+### NPM
+```bash
+$ npm install react-show-svg --save
+```
+
+### Yarn
+```bash
+$ yarn add svg-inline-loader && react-show-svg
+```
+
+### Usage
+Import raw svg file with [svg-inline-loader](https://github.com/webpack-contrib/svg-inline-loader) and pass it
+as `icon` property.
+
+You can also pass `width & height` or `size` properties ( pass size if you want width & height to be equal ).
 
 ### API
 * icon: `string`
