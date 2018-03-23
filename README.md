@@ -1,17 +1,22 @@
 # Introduction
-Parse svg to jsx & create wrapper around.
+Simple react component that transforms plain svg to usable icon.
 
 ### TL;DR
 ```javascript
+import React from 'react';
 import ReactShowSvg from 'react-show-svg';
 import SvgIcon from 'path/to/icon.svg';
 
-render() {
-  <ReactShowSvg
-    size="30px"
-    fill="#000000"
-    icon={SvgIcon}
-  />
+class App extends React.Component {
+  render() {
+    return (
+      <ReactShowSvg
+        size="30px"
+        fill="#000000"
+        icon={SvgIcon}
+      />
+    );
+  }
 }
 ```
 
@@ -31,7 +36,7 @@ as `icon` property.
 
 You can also pass `width & height` or `size` properties ( pass size if you want width & height to be equal ).
 
-**IMPORTANT:** Update your webpack config file:
+**IMPORTANT** - Update your webpack config file:
 
 ```javascript
 const config = {
