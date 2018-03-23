@@ -50,16 +50,19 @@ var ReactShowSvg = function (_Component) {
           height = _this$props.height,
           fill = _this$props.fill;
 
-      // parse svg to jsx
-
-      return (0, _svgToJsx2.default)(raw, {
+      var options = {
         props: {
           width: size || width,
           height: size || height,
           fill: fill
         }
-      }).then(function (jsx) {
+      };
+
+      // parse svg to jsx
+      return (0, _svgToJsx2.default)(raw, options).then(function (jsx) {
         return jsx;
+      }).catch(function (error) {
+        console.log('Error parsing icon: ', error);
       });
     };
 
