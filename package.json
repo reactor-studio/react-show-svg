@@ -3,7 +3,7 @@
   "version": "0.10.2",
   "description": "React wrapper component for svg icons",
   "author": "Josip Sokec <josip@sokec.net>",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
