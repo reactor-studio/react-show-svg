@@ -1,13 +1,9 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { shallow } from 'enzyme';
 import Renderer from 'react-test-renderer';
 
 // Component
 import App from '../src';
-
-// Config
-configure({ adapter: new Adapter() });
 
 // Assets
 const icon = '<svg version="1.1"><text font-family="Verdana"/></svg>';

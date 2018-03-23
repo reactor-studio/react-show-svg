@@ -21,6 +21,7 @@
     "publish": "npm run build && np"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setupTest.js",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
