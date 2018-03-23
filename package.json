@@ -50,10 +50,10 @@
     "enzyme-to-json": "^3.3.3",
     "jest": "22.1.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "svg-inline-loader": "^0.8.0"
+    "react-dom": "^16.2.0"
   },
   "peerDependencies": {
-    "react": "16.2.0"
+    "react": "16.2.0",
+    "svg-inline-loader": "^0.8.0"
   }
 }
