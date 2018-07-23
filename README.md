@@ -56,7 +56,7 @@ $ npm install react-show-svg --save
 
 ### Yarn
 ```bash
-$ yarn add svg-inline-loader && react-show-svg
+$ yarn add react-show-svg
 ```
 
 ### Usage
